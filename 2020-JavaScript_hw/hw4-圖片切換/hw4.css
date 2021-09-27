@@ -1,0 +1,48 @@
+h1{
+	background-color:#DAA520;
+	text-align: center;
+}
+#PhotoViewer{
+	background-color: brown;
+	margin: auto;
+	position: relative;
+	width: 640px;
+	height: 425px;
+}
+/*滑鼠移到上面的時候*/
+/*不能直接previous,next(吃不到hover)*/
+#PhotoViewer:hover #previous,#PhotoViewer:hover #next{
+	margin:0 30px;
+	opacity: 1;
+	transition: 2s;
+}	
+#previous{
+	width: 1em;
+	text-align: center;
+	background-color: green;
+	font-size: 3em;
+	border-radius: 100%;
+	position: absolute;
+	top: 200px;
+	left: 0px;
+	z-index:10;
+	opacity: 0;
+}
+
+#next{
+	width: 1em;
+	text-align: center;
+	background-color: green;
+	font-size: 3em;
+	border-radius: 100%;
+	position: absolute;
+	top: 200px;
+	right: 0px;
+	opacity: 0;
+	z-index:10;
+}
+img {
+	width: 640px;
+	height: 425px;
+	position: absolute;
+}

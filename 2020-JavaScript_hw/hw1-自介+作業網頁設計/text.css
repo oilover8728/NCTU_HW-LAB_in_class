@@ -1,0 +1,36 @@
+/*
+purpose: for hw1.html
+data: 2020/3/17
+
+*/
+* 		{ color:black;					}
+body	{ background-color: gray;}
+h1  	{ color:blue; font-size:29px;}
+h1 		{ font-family: "標楷體";}
+
+div #d1{
+	height:80px; width:80px;
+	margin:0;
+	border:1px solid blue;
+}
+div#d2 {
+	background-color:pink;
+	position:relative;
+	top:2em;
+	left:2em; /* right: 2em; */
+	/*left:15%;*/
+	/*z-index: -1;*/
+}
+div#d3 {
+	background-color:green;
+}
+#floatmark {
+	position:relative;
+	width:80px;
+	height:20px;
+	border:solid 1px black;
+	left:85%;
+	bottom:2%;
+}
+
+button{ font: caption;}

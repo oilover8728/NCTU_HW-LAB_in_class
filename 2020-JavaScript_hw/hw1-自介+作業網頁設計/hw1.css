@@ -1,0 +1,174 @@
+body{
+	margin:20px;
+	background-color:black;
+}
+*{
+	color:white;
+	font-weight:bold;
+}
+h1#title{
+	font-size:50px;
+	text-shadow:0.1em 2px 4px gray;
+	text-align:center;
+	font-family: "標楷體";
+}
+h2#end{
+	text-align:center;
+	font-size:15pt;
+	margin-top:-1em;
+	color:white;
+}
+a#homework{
+	margin-right:1em;
+	text-decoration:none;
+	width:63%;
+	position:relative;
+	z-index: 9999;
+}
+a#mail{
+	color:red;
+}
+a#mail1{
+	color:lightblue;
+}
+a#title{
+	text-shadow:0.1em 2px 1px black;
+}
+
+td#title{
+	color:yellow;
+	font-size:24pt;
+	font-weight:bold;
+	font-family: "標楷體";
+	
+}
+
+hr{
+	position:relative;
+	z-index:99;
+	border-color:white;
+}
+#floatmark {
+	position:absolute;
+	width:10%;
+	height:10%;
+	border:solid 1px black;
+	left:87%;
+	bottom:10%;
+}
+td{
+	padding:2px;
+	font-size:20pt;
+	font-family: "標楷體";
+}
+div#container {
+	border: 2px solid green;
+}
+ul.navigation li{
+	position:relative;
+	float: left;
+	list-style: none;
+	width:18em;
+	text-align:center;
+	color:blue;
+}
+
+ul.navigation li a{
+	position:relative;
+	z-index:999;
+	font-size:20pt;
+	font-family: "標楷體";
+	display: block;
+	border-radius:16px;
+	padding: 6px 32px;
+	background:gray; 
+	color:white;
+	text-decoration:none;
+	border-bottom:1px solid #CCC;
+	border-left: 1px solid #CCC;
+	border-right: 1px solid #CCC;
+	margin-left:2em;
+}
+ul.navigation li ul{
+	
+	display:none;
+	float:left;
+	position:absolute;
+	margin:0;
+	padding:0;
+	
+}
+ul.navigation li:hover>ul{
+	display:block;
+	
+}
+
+nav.horizontallinks{
+	
+	list-style-type: none;
+	font-size: 18px;
+	display: block;
+	color: black;
+	text-decoration: none;
+	position:relative;
+	z-index:999;
+}
+
+
+nav#test{
+	position:relative;
+	left:2%;
+	top:10%;
+	height:120%;
+	width: 25%;
+	bottom:1em;
+}
+table{
+	position:relative;
+	margin-left:30%;
+	margin-top:-30%;
+	
+}
+
+@media (max-width:900px){
+	nav.horizontallinks{
+		left:45px;
+	}
+	ul.navigation li a{
+		position:relative;
+		font-size:15pt;
+}
+	ul.navigation li{
+		position:relative;
+		float: left;
+		list-style: none;
+		width:13em;
+		text-align:center;
+	}
+	nav#test{
+		position:relative;
+		left:16%;
+		top:0px;
+		height:200px;
+		width: 300px;
+	}
+	table{
+		color:CCC;
+		margin-left:1%;
+		margin-top:14em;
+	}
+	td#context{
+		margin-left:-10em;
+		padding:0.5px;
+	}
+	a#homework{
+		width:55%;
+	}
+	#floatmark{
+		position:relative;
+		bottom:11em;
+	}
+}
+
+
+

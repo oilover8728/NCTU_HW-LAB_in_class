@@ -1,0 +1,42 @@
+
+*{
+	text-align: center;
+}
+body{
+	background-color:lightgreen;
+	width: 80%;
+	margin:auto;
+	text-align: center;
+	font-size:2em;
+}
+table,td{
+	background-color:lightgray;
+	border: 5px solid purple;
+}
+table{
+	border-collapse: collapse;
+	table-layout: fixed;
+	margin-top:;
+	margin-bottom:1em ;
+	
+}
+td {
+	text-align:center;
+}
+input[type=checkbox] {
+  zoom: 200%;
+}
+#btnAnswer{
+	margin-top: 5px;
+	zoom: 200%;
+}
+#btnClear{
+	margin-top: 5px;
+	zoom: 200%;
+}
+#magic {
+	margin:auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 50px;
+}

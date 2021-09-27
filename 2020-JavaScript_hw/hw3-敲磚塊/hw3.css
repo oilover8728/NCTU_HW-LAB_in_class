@@ -1,0 +1,22 @@
+p,h1{
+	font-size:32px;
+	text-align:center;
+}
+p{
+	color:orange;
+}
+#container { 
+  width: 800px;
+  height: 600px;
+  margin:auto;
+  position: relative;	/*因為是基準點，所以要realative*/
+  background: black;
+}
+.ball,.paddle,.brick {
+  position: absolute;	/*要動所以absolute*/
+  top: 0px;
+  left: 0px;
+}
+.ball {
+  border-radius: 100%;
+}
