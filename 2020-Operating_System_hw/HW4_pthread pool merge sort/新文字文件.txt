@@ -1,0 +1,6 @@
+使用queue來存接下來的工作
+當2*i+1和2*i+2工作的完成時將i排入queue中待命
+更改init creat 
+並在main中控制排班
+使用bool done[16] 來觀察工作完成與否
+bool pusktask[7] 判斷0~7的工作是否已經push過
