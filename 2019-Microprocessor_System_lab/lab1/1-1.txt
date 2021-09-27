@@ -1,0 +1,31 @@
+.data
+	result: .byte 0
+.text
+.global main
+.equ X, 0x55AA
+.equ Y, 0xAA55
+//R0=X, R1=Y, R2=&result, R3=i, R4=16, R5=1, R6, R7=answer
+hamm:
+	//TODO
+	movs R6, R0
+	and R6, R6, R5
+	add R7, R7, R6
+	lsr R0, R0, R5
+	add R3, R3, R5
+	cmp R3, R4
+	bne hamm
+	bx lr
+
+main:
+	movw R0, #X //This code will cause assemble error. Why? And how to fix.
+	movw R1, #Y
+	movs R7, #0
+	movs R5, #1
+	movs R4, #16
+	movs R3, #0
+	eor R0, R0, R1
+	ldrb R2, =result
+	bl hamm
+	strb R7, [R2]
+
+L: b L

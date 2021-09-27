@@ -1,0 +1,43 @@
+.data
+	arr1: .byte 0x19, 0x34, 0x14, 0x32, 0x52, 0x23, 0x61, 0x29
+	arr2: .byte 0x18, 0x17, 0x33, 0x16, 0xFA, 0x20, 0x55, 0xAC
+.text
+.global main
+//r1=i, r2=j, r3=arr[i], r4=arr[j], r5=t, r6=7, r7=8 ,r8=1;
+change:
+	movs r5, r3
+	movs r3, r4
+	movs r4, r5
+	b back
+
+do_sort:
+	movs r1, #0
+	sort:
+		add r2, r2, #1
+		sub r1, r2, #1
+ 		ldrb r3, [r0, r1]
+		ldrb r4, [r0, r2]
+		cmp r3, r4
+		bhi change
+		back:
+		strb r3, [r0, r1]
+		strb r4, [r0, r2]
+		cmp r2, r7
+		bne sort
+	sub r7, r7, #1
+	cmp r7, r8 
+	bne do_sort
+	bx lr
+
+main:
+	movs r6, #7
+	movs r7, #8
+	movs r8, #1
+	ldr r0, =arr1
+	movs r1, #0
+	bl do_sort
+	ldr r0, =arr2
+	movs r1, #0
+	bl do_sort
+
+L: b L

@@ -1,0 +1,45 @@
+.text
+.global main
+.equ N, 1
+//r1=a, r2=b, r3=c, r4=d, r5=i
+ifone:
+	mov R2, #1
+	b L
+
+overflow:
+	mov R2, #2
+	neg R2, R2
+	b L
+
+outofrange:
+	movs R2, #1
+	neg R2, R2
+	b L
+
+fib:
+	//TODO
+	movs R3, R2
+	add R4, R1, R2
+	cmp R4, #0
+	blt overflow
+	mov R1, R3
+	mov R2, R4
+	add R5, R5, #1
+	cmp R0, R5
+	bne fib
+	bx lr
+
+main:
+	movs R0, #N
+	cmp R0, #100
+	bgt outofrange
+	cmp R0, #1
+	blt outofrange
+	cmp R0, #1
+	beq ifone
+	movs R1, #0
+	movs R2, #1
+	movs R5, #1
+	bl fib
+	//answer in r2
+L: b L
