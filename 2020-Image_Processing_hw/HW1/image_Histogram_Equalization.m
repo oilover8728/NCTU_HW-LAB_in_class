@@ -1,0 +1,30 @@
+clear all
+%讀取原圖
+IM_A=imread('未戴口罩禁止.png');
+IM_AG=rgb2gray(IM_A);
+[L,W]=size(IM_AG);
+figure(1);
+imshow(IM_AG);
+%原圖的灰階直方圖分布
+U8=0:1:255;
+IM_AG_resh=reshape(IM_AG,[],1);
+figure(2)
+hist(IM_AG_resh,U8);
+[n,bin]=hist(IM_AG_resh,U8);
+%計算原圖灰階直方圖累積函數
+acc_n=cumsum(n);
+figure(3)
+plot(bin,acc_n);
+%灰階直方圖均衡化的轉換計算
+Hist_E_IM_AG_resh=round((acc_n-min(double(IM_AG_resh)))./sum(n)*255);
+%將轉換後的灰階值重新置入原圖矩陣，成為新圖
+for i=1:1:256
+    Hist_E_IM_AG(find(IM_AG_resh==bin(i)))=Hist_E_IM_AG_resh(i);
+end
+Fin_Hist_E_IM_AG=uint8(reshape(Hist_E_IM_AG,L,W));
+%新圖檔的灰階直方圖分布
+figure(4)
+hist(Hist_E_IM_AG,U8);
+%讀取新圖檔
+figure(5)
+imshow(Fin_Hist_E_IM_AG);

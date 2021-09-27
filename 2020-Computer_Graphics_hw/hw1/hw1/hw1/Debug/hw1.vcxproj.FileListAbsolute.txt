@@ -1,0 +1,9 @@
+C:\Users\user\Desktop\hw1\hw1\Debug\hw1.exe
+C:\Users\user\Desktop\hw1\hw1\Debug\hw1.pdb
+C:\Users\user\Desktop\hw1\Debug\hw1.pdb
+C:\Users\user\Downloads\hw1\Debug\hw1.pdb
+C:\Users\user\Downloads\hw1\hw1\Debug\hw1.exe
+C:\Users\user\Downloads\hw1\hw1\Debug\hw1.pdb
+C:\Users\ASUS\Desktop\交通資工\大四(上)\計算機圖學\HW\hw1\Debug\hw1.pdb
+C:\Users\ASUS\Desktop\交通資工\大四(上)\計算機圖學\HW\hw1\hw1\Debug\hw1.exe
+C:\Users\ASUS\Desktop\交通資工\大四(上)\計算機圖學\HW\hw1\hw1\Debug\hw1.pdb
